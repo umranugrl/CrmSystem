@@ -34,36 +34,37 @@ namespace crmSystem.Persistence.Contexts
 
             // Seed data ekleme
             modelBuilder.Entity<Customer>().HasData(
-                new Customer { Id = 1, Name = "John Doe", Email = "john.doe@example.com", Phone = "1234567890", Address = "123 Main St" },
-                new Customer { Id = 2, Name = "Jane Smith", Email = "jane.smith@example.com", Phone = "0987654321", Address = "456 Oak Ave" },
-                new Customer { Id = 3, Name = "Alice Johnson", Email = "alice.johnson@example.com", Phone = "1111111111", Address = "789 Pine Rd" },
-                new Customer { Id = 4, Name = "Bob Brown", Email = "bob.brown@example.com", Phone = "2222222222", Address = "321 Elm St" },
-                new Customer { Id = 5, Name = "Charlie Green", Email = "charlie.green@example.com", Phone = "3333333333", Address = "654 Maple Dr" }
+                new Customer { Id = 1, Name = "Ahmet Yılmaz", Email = "ahmet.yilmaz@ornek.com", Phone = "1234567890", Address = "123 Ana Cad." },
+                new Customer { Id = 2, Name = "Ayşe Kaya", Email = "ayse.kaya@ornek.com", Phone = "0987654321", Address = "456 Meşe Sok." },
+                new Customer { Id = 3, Name = "Ali Vural", Email = "ali.vural@ornek.com", Phone = "1111111111", Address = "789 Çam Yolu" },
+                new Customer { Id = 4, Name = "Zeynep Demir", Email = "zeynep.demir@ornek.com", Phone = "2222222222", Address = "321 Karaağaç Cd." },
+                new Customer { Id = 5, Name = "Mehmet Kara", Email = "mehmet.kara@ornek.com", Phone = "3333333333", Address = "654 Akçaağaç Sk." }
             );
 
             modelBuilder.Entity<Interaction>().HasData(
-                new Interaction { Id = 1, CustomerId = 1, InteractionType = "Email", Date = DateTime.Now.AddDays(-10), Details = "Initial contact" },
-                new Interaction { Id = 2, CustomerId = 2, InteractionType = "Phone", Date = DateTime.Now.AddDays(-5), Details = "Follow-up call" },
-                new Interaction { Id = 3, CustomerId = 3, InteractionType = "Meeting", Date = DateTime.Now.AddDays(-3), Details = "Product demo" },
-                new Interaction { Id = 4, CustomerId = 4, InteractionType = "Email", Date = DateTime.Now.AddDays(-7), Details = "Price negotiation" },
-                new Interaction { Id = 5, CustomerId = 5, InteractionType = "Phone", Date = DateTime.Now.AddDays(-2), Details = "Contract discussion" }
+                new Interaction { Id = 1, CustomerId = 1, InteractionType = "E-posta", Date = DateTime.Now.AddDays(-10), Details = "İlk temas" },
+                new Interaction { Id = 2, CustomerId = 2, InteractionType = "Telefon", Date = DateTime.Now.AddDays(-5), Details = "Takip çağrısı" },
+                new Interaction { Id = 3, CustomerId = 3, InteractionType = "Toplantı", Date = DateTime.Now.AddDays(-3), Details = "Ürün tanıtımı" },
+                new Interaction { Id = 4, CustomerId = 4, InteractionType = "E-posta", Date = DateTime.Now.AddDays(-7), Details = "Fiyat müzakeresi" },
+                new Interaction { Id = 5, CustomerId = 5, InteractionType = "Telefon", Date = DateTime.Now.AddDays(-2), Details = "Sözleşme görüşmesi" }
             );
 
             modelBuilder.Entity<Opportunity>().HasData(
-                new Opportunity { Id = 1, CustomerId = 1, OpportunityName = "New Project", EstimatedValue = 10000m, Status = "Open", Description = "New software project" },
-                new Opportunity { Id = 2, CustomerId = 2, OpportunityName = "Consulting Service", EstimatedValue = 5000m, Status = "Closed", Description = "Consulting services for business" },
-                new Opportunity { Id = 3, CustomerId = 3, OpportunityName = "Product Sale", EstimatedValue = 15000m, Status = "Open", Description = "Selling software product" },
-                new Opportunity { Id = 4, CustomerId = 4, OpportunityName = "Maintenance Contract", EstimatedValue = 7000m, Status = "Open", Description = "Annual maintenance contract" },
-                new Opportunity { Id = 5, CustomerId = 5, OpportunityName = "Software Development", EstimatedValue = 20000m, Status = "Closed", Description = "Custom software development" }
+                new Opportunity { Id = 1, CustomerId = 1, OpportunityName = "Yeni Proje", EstimatedValue = 10000m, Status = "Açık", Description = "Yeni yazılım projesi" },
+                new Opportunity { Id = 2, CustomerId = 2, OpportunityName = "Danışmanlık Hizmeti", EstimatedValue = 5000m, Status = "Kapalı", Description = "İşletme için danışmanlık hizmetleri" },
+                new Opportunity { Id = 3, CustomerId = 3, OpportunityName = "Ürün Satışı", EstimatedValue = 15000m, Status = "Açık", Description = "Yazılım ürünü satışı" },
+                new Opportunity { Id = 4, CustomerId = 4, OpportunityName = "Bakım Anlaşması", EstimatedValue = 7000m, Status = "Açık", Description = "Yıllık bakım anlaşması" },
+                new Opportunity { Id = 5, CustomerId = 5, OpportunityName = "Yazılım Geliştirme", EstimatedValue = 20000m, Status = "Kapalı", Description = "Özel yazılım geliştirme" }
             );
 
             modelBuilder.Entity<Request>().HasData(
-                new Request { Id = 1, CustomerId = 1, RequestType = "Support", Details = "Technical support needed", Status = "Open" },
-                new Request { Id = 2, CustomerId = 2, RequestType = "Inquiry", Details = "Product inquiry", Status = "Closed" },
-                new Request { Id = 3, CustomerId = 3, RequestType = "Complaint", Details = "Service not satisfactory", Status = "Open" },
-                new Request { Id = 4, CustomerId = 4, RequestType = "Feedback", Details = "Positive feedback on service", Status = "Closed" },
-                new Request { Id = 5, CustomerId = 5, RequestType = "Request for Proposal", Details = "Need proposal for new project", Status = "Open" }
+                new Request { Id = 1, CustomerId = 1, RequestType = "Destek", Details = "Teknik destek gerekli", Status = "Açık" },
+                new Request { Id = 2, CustomerId = 2, RequestType = "Soru", Details = "Ürün hakkında soru", Status = "Kapalı" },
+                new Request { Id = 3, CustomerId = 3, RequestType = "Şikayet", Details = "Hizmet memnuniyetsizliği", Status = "Açık" },
+                new Request { Id = 4, CustomerId = 4, RequestType = "Geri Bildirim", Details = "Hizmet hakkında olumlu geri bildirim", Status = "Kapalı" },
+                new Request { Id = 5, CustomerId = 5, RequestType = "Teklif Talebi", Details = "Yeni proje için teklif talebi", Status = "Açık" }
             );
+
         }
     }
 }

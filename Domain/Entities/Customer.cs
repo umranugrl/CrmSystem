@@ -12,9 +12,6 @@ namespace crmSystem.Domain.Entities
         public string Address { get; set; }
         public DateTime CreatedDate { get; set; }
 
-        public DateTime BirthDate { get; set; } // BirthDate özelliği
-        public PurchaseHistory PurchaseHistory { get; set; } // PurchaseHistory özelliği
-
         // Navigation Properties
         public ICollection<Interaction> Interactions { get; set; }
         public ICollection<Opportunity> Opportunities { get; set; }

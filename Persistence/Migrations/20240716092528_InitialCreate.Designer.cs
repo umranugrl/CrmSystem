@@ -12,8 +12,8 @@ using crmSystem.Persistence.Contexts;
 namespace Persistence.Migrations
 {
     [DbContext(typeof(CrmDbContext))]
-    [Migration("20240712072012_AddSeedData")]
-    partial class AddSeedData
+    [Migration("20240716092528_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -60,46 +60,46 @@ namespace Persistence.Migrations
                         new
                         {
                             Id = 1,
-                            Address = "123 Main St",
+                            Address = "123 Ana Cad.",
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Email = "john.doe@example.com",
-                            Name = "John Doe",
+                            Email = "ahmet.yilmaz@ornek.com",
+                            Name = "Ahmet Yılmaz",
                             Phone = "1234567890"
                         },
                         new
                         {
                             Id = 2,
-                            Address = "456 Oak Ave",
+                            Address = "456 Meşe Sok.",
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Email = "jane.smith@example.com",
-                            Name = "Jane Smith",
+                            Email = "ayse.kaya@ornek.com",
+                            Name = "Ayşe Kaya",
                             Phone = "0987654321"
                         },
                         new
                         {
                             Id = 3,
-                            Address = "789 Pine Rd",
+                            Address = "789 Çam Yolu",
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Email = "alice.johnson@example.com",
-                            Name = "Alice Johnson",
+                            Email = "ali.vural@ornek.com",
+                            Name = "Ali Vural",
                             Phone = "1111111111"
                         },
                         new
                         {
                             Id = 4,
-                            Address = "321 Elm St",
+                            Address = "321 Karaağaç Cd.",
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Email = "bob.brown@example.com",
-                            Name = "Bob Brown",
+                            Email = "zeynep.demir@ornek.com",
+                            Name = "Zeynep Demir",
                             Phone = "2222222222"
                         },
                         new
                         {
                             Id = 5,
-                            Address = "654 Maple Dr",
+                            Address = "654 Akçaağaç Sk.",
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Email = "charlie.green@example.com",
-                            Name = "Charlie Green",
+                            Email = "mehmet.kara@ornek.com",
+                            Name = "Mehmet Kara",
                             Phone = "3333333333"
                         });
                 });
@@ -137,41 +137,41 @@ namespace Persistence.Migrations
                         {
                             Id = 1,
                             CustomerId = 1,
-                            Date = new DateTime(2024, 7, 2, 10, 20, 10, 108, DateTimeKind.Local).AddTicks(5072),
-                            Details = "Initial contact",
-                            InteractionType = "Email"
+                            Date = new DateTime(2024, 7, 6, 12, 25, 26, 680, DateTimeKind.Local).AddTicks(1205),
+                            Details = "İlk temas",
+                            InteractionType = "E-posta"
                         },
                         new
                         {
                             Id = 2,
                             CustomerId = 2,
-                            Date = new DateTime(2024, 7, 7, 10, 20, 10, 108, DateTimeKind.Local).AddTicks(5122),
-                            Details = "Follow-up call",
-                            InteractionType = "Phone"
+                            Date = new DateTime(2024, 7, 11, 12, 25, 26, 680, DateTimeKind.Local).AddTicks(1239),
+                            Details = "Takip çağrısı",
+                            InteractionType = "Telefon"
                         },
                         new
                         {
                             Id = 3,
                             CustomerId = 3,
-                            Date = new DateTime(2024, 7, 9, 10, 20, 10, 108, DateTimeKind.Local).AddTicks(5130),
-                            Details = "Product demo",
-                            InteractionType = "Meeting"
+                            Date = new DateTime(2024, 7, 13, 12, 25, 26, 680, DateTimeKind.Local).AddTicks(1244),
+                            Details = "Ürün tanıtımı",
+                            InteractionType = "Toplantı"
                         },
                         new
                         {
                             Id = 4,
                             CustomerId = 4,
-                            Date = new DateTime(2024, 7, 5, 10, 20, 10, 108, DateTimeKind.Local).AddTicks(5139),
-                            Details = "Price negotiation",
-                            InteractionType = "Email"
+                            Date = new DateTime(2024, 7, 9, 12, 25, 26, 680, DateTimeKind.Local).AddTicks(1248),
+                            Details = "Fiyat müzakeresi",
+                            InteractionType = "E-posta"
                         },
                         new
                         {
                             Id = 5,
                             CustomerId = 5,
-                            Date = new DateTime(2024, 7, 10, 10, 20, 10, 108, DateTimeKind.Local).AddTicks(5146),
-                            Details = "Contract discussion",
-                            InteractionType = "Phone"
+                            Date = new DateTime(2024, 7, 14, 12, 25, 26, 680, DateTimeKind.Local).AddTicks(1251),
+                            Details = "Sözleşme görüşmesi",
+                            InteractionType = "Telefon"
                         });
                 });
 
@@ -212,46 +212,46 @@ namespace Persistence.Migrations
                         {
                             Id = 1,
                             CustomerId = 1,
-                            Description = "New software project",
+                            Description = "Yeni yazılım projesi",
                             EstimatedValue = 10000m,
-                            OpportunityName = "New Project",
-                            Status = "Open"
+                            OpportunityName = "Yeni Proje",
+                            Status = "Açık"
                         },
                         new
                         {
                             Id = 2,
                             CustomerId = 2,
-                            Description = "Consulting services for business",
+                            Description = "İşletme için danışmanlık hizmetleri",
                             EstimatedValue = 5000m,
-                            OpportunityName = "Consulting Service",
-                            Status = "Closed"
+                            OpportunityName = "Danışmanlık Hizmeti",
+                            Status = "Kapalı"
                         },
                         new
                         {
                             Id = 3,
                             CustomerId = 3,
-                            Description = "Selling software product",
+                            Description = "Yazılım ürünü satışı",
                             EstimatedValue = 15000m,
-                            OpportunityName = "Product Sale",
-                            Status = "Open"
+                            OpportunityName = "Ürün Satışı",
+                            Status = "Açık"
                         },
                         new
                         {
                             Id = 4,
                             CustomerId = 4,
-                            Description = "Annual maintenance contract",
+                            Description = "Yıllık bakım anlaşması",
                             EstimatedValue = 7000m,
-                            OpportunityName = "Maintenance Contract",
-                            Status = "Open"
+                            OpportunityName = "Bakım Anlaşması",
+                            Status = "Açık"
                         },
                         new
                         {
                             Id = 5,
                             CustomerId = 5,
-                            Description = "Custom software development",
+                            Description = "Özel yazılım geliştirme",
                             EstimatedValue = 20000m,
-                            OpportunityName = "Software Development",
-                            Status = "Closed"
+                            OpportunityName = "Yazılım Geliştirme",
+                            Status = "Kapalı"
                         });
                 });
 
@@ -289,41 +289,41 @@ namespace Persistence.Migrations
                         {
                             Id = 1,
                             CustomerId = 1,
-                            Details = "Technical support needed",
-                            RequestType = "Support",
-                            Status = "Open"
+                            Details = "Teknik destek gerekli",
+                            RequestType = "Destek",
+                            Status = "Açık"
                         },
                         new
                         {
                             Id = 2,
                             CustomerId = 2,
-                            Details = "Product inquiry",
-                            RequestType = "Inquiry",
-                            Status = "Closed"
+                            Details = "Ürün hakkında soru",
+                            RequestType = "Soru",
+                            Status = "Kapalı"
                         },
                         new
                         {
                             Id = 3,
                             CustomerId = 3,
-                            Details = "Service not satisfactory",
-                            RequestType = "Complaint",
-                            Status = "Open"
+                            Details = "Hizmet memnuniyetsizliği",
+                            RequestType = "Şikayet",
+                            Status = "Açık"
                         },
                         new
                         {
                             Id = 4,
                             CustomerId = 4,
-                            Details = "Positive feedback on service",
-                            RequestType = "Feedback",
-                            Status = "Closed"
+                            Details = "Hizmet hakkında olumlu geri bildirim",
+                            RequestType = "Geri Bildirim",
+                            Status = "Kapalı"
                         },
                         new
                         {
                             Id = 5,
                             CustomerId = 5,
-                            Details = "Need proposal for new project",
-                            RequestType = "Request for Proposal",
-                            Status = "Open"
+                            Details = "Yeni proje için teklif talebi",
+                            RequestType = "Teklif Talebi",
+                            Status = "Açık"
                         });
                 });
 
